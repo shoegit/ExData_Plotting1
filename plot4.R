@@ -24,7 +24,7 @@ par(mfrow=c(2,2))
 plot(pwrData$datetime, pwrData$Global_active_power, type="l", xlab="", ylab="Global Active Power")
 
 #second: plot time against Voltage
-plot(pwrData$datetime, pwrData$Voltage, type="l", xlab="", ylab="Voltage")
+plot(pwrData$datetime, pwrData$Voltage, type="l", xlab="datetime", ylab="Voltage")
 
 #Third: Compare sub meterings
 plot(pwrData$datetime, pwrData$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
@@ -33,5 +33,5 @@ lines(pwrData$datetime, pwrData$Sub_metering_3, type="l", col="blue")
 legend("topright",c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1,1,1),col=c("black", "red", "blue")) 
 
 #Fourth: plot time against global reactive power
-plot(pwrData$datetime, pwrData$Global_reactive_power, type="l",xlab="", ylab="Global reactive power")
+plot(pwrData$datetime, pwrData$Global_reactive_power, type="l",xlab="datetime", ylab="Global reactive power")
 dev.off()
